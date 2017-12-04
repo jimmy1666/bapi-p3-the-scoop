@@ -1,0 +1,64 @@
+users:
+  bob:
+    username: bob
+    articleIds: []
+    commentIds: []
+  jim:
+    username: jim
+    articleIds: []
+    commentIds: []
+  Bryan:
+    username: Bryan
+    articleIds: []
+    commentIds: []
+  Dad:
+    username: Dad
+    articleIds:
+      - 6
+    commentIds:
+      - 4
+  James:
+    username: James
+    articleIds: []
+    commentIds:
+      - 3
+articles:
+  '1': null
+  '2': null
+  '3': null
+  '4': null
+  '5': null
+  '6':
+    id: 6
+    title: How do I get my broadband to work
+    url: www.sky.com
+    username: Dad
+    commentIds:
+      - 3
+      - 4
+    upvotedBy:
+      - James
+    downvotedBy: []
+    comments:
+      - &ref_0
+        id: 3
+        body: Still struggling with broadband dad?
+        username: James
+        articleId: 6
+        upvotedBy:
+          - Dad
+        downvotedBy: []
+      - &ref_1
+        id: 4
+        body: Yes I am!
+        username: Dad
+        articleId: 6
+        upvotedBy: []
+        downvotedBy: []
+nextArticleId: 7
+comments:
+  '1': null
+  '2': null
+  '3': *ref_0
+  '4': *ref_1
+nextCommentId: 5
